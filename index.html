@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eletromagnetismo em 2 Horas — Guia de Estudo</title>
+<meta name="description" content="Guia rápido de Indução Eletromagnética e Lei de Faraday: imagens mentais, exemplos concretos, comparações simples e um atalho mental." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="top-nav-inner">
+    <a class="brand" href="index.html"><span class="spark">⚡</span> Eletromagnetismo Rápido</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Guia de estudo</a>
+      <a href="quiz.html">Fazer o quiz →</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">Plano de 2 horas</span>
+    <h1>Indução Eletromagnética: do zero ao domínio em 2 horas</h1>
+    <p class="subtitle">Sete passos curtos, cada um com uma imagem mental, um exemplo concreto calculado e uma comparação simples. No final, um atalho mental para você nunca mais esquecer — e um quiz inteligente para testar o que ficou.</p>
+
+    <div class="timebar">
+      <span class="pill">⏱ <b>~15 min</b> por módulo</span>
+      <span class="pill">🧠 <b>7</b> módulos</span>
+      <span class="pill">✅ <b>1</b> atalho mental</span>
+      <span class="pill">📝 <b>10</b> perguntas no quiz</span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Sumário">
+    <h2>Roteiro dos 120 minutos</h2>
+    <ol>
+      <li><a href="#m1">Força magnética (Lei de Lorentz)</a></li>
+      <li><a href="#m2">Fluxo magnético (Φ)</a></li>
+      <li><a href="#m3">Lei de Faraday (f.e.m. induzida)</a></li>
+      <li><a href="#m4">Lei de Lenz (o sentido da corrente)</a></li>
+      <li><a href="#m5">Lendo gráficos de Φ × t</a></li>
+      <li><a href="#m6">Corrente alternada vs. contínua</a></li>
+      <li><a href="#m7">Aplicações do mundo real</a></li>
+      <li><a href="#atalho">🎯 Atalho mental</a></li>
+    </ol>
+  </nav>
+
+  <!-- MODULE 1 -->
+  <section class="module" id="m1">
+    <div class="module-head">
+      <div class="module-num">1</div>
+      <h2>Força magnética sobre uma carga (Força de Lorentz)</h2>
+    </div>
+    <p class="module-tag">Antes de falar em "induzir corrente", veja como um campo magnético empurra uma carga que já está se movendo.</p>
+
+    <p>Quando uma carga elétrica <b>q</b> se move com velocidade <b>v</b> dentro de um campo magnético <b>B</b>, ela sofre uma força. Essa força só existe se a carga estiver em movimento e não for paralela ao campo:</p>
+    <div class="formula">F = q · v · B · sen(θ)</div>
+    <p>onde θ é o ângulo entre a direção da velocidade e a direção do campo magnético.</p>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Pense num rio (o campo magnético, sempre fluindo na mesma direção) e um nadador (a carga) atravessando-o. Se o nadador nadar <b>exatamente no sentido da correnteza</b>, ele não sente nenhum empurrão de lado. Se nadar <b>perpendicular</b> à correnteza, sente o empurrão máximo, que o desvia para o lado. Essa "correnteza que empurra de lado" é a força magnética — e ela some quando v e B são paralelos (sen 0° = 0).</p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto</h3>
+      <p>Uma partícula com carga Q = 3,2×10⁻¹⁹ C entra numa região com campo magnético de 3 T, com velocidade de 2,0×10⁶ m/s, formando um ângulo θ com o campo tal que sen θ = 1/3.</p>
+      <p>F = q·v·B·senθ = 3,2×10⁻¹⁹ × 2,0×10⁶ × 3 × (1/3) ≈ <b>6,4×10⁻¹³ N</b></p>
+      <p>Pouquíssimo em números absolutos — mas é essa força minúscula que curva o caminho de elétrons dentro de um tubo de TV antigo, num acelerador de partículas, ou na aurora boreal.</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <p>É como empurrar uma bicicleta: se você empurrar <b>na mesma direção</b> que ela já está andando (para frente), ela não vira. Se empurrar <b>de lado</b>, ela vira. O campo magnético só "vira" cargas que cruzam suas linhas de força — nunca as que andam exatamente junto com elas.</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> sem movimento relativo entre carga e campo, ou com movimento paralelo ao campo, não existe força magnética.</div>
+  </section>
+
+  <!-- MODULE 2 -->
+  <section class="module" id="m2">
+    <div class="module-head">
+      <div class="module-num">2</div>
+      <h2>Fluxo magnético (Φ)</h2>
+    </div>
+    <p class="module-tag">A grandeza que a Lei de Faraday vai observar "variar" — entenda o que ela mede antes de tudo.</p>
+
+    <p>O fluxo magnético mede <b>quantas linhas de campo magnético atravessam uma superfície</b> (por exemplo, a área de uma espira):</p>
+    <div class="formula">Φ = B · A · cos(θ)</div>
+    <p>B é a intensidade do campo, A é a área da espira, e θ é o ângulo entre o campo e a direção perpendicular ao plano da espira.</p>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Imagine um varal (a espira) estendido no quintal num dia de sol. O "fluxo" é a quantidade de luz solar que passa através da área do varal. Se o sol está bem acima (perpendicular ao varal), passa o máximo de luz. Se o varal está de perfil para o sol (paralelo aos raios), quase nenhuma luz atravessa — fluxo quase zero, mesmo que o sol continue brilhando com a mesma intensidade.</p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto</h3>
+      <p>Uma espira circular de raio 30,0 cm (A = π·r² = π·0,3² ≈ 0,27 m²) está perpendicular a um campo magnético. Se B = 0,010 T, o fluxo através dela é:</p>
+      <p>Φ = B · A = 0,010 × 0,27 ≈ <b>2,7×10⁻³ Wb</b> (weber, a unidade de fluxo magnético)</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <p>Fluxo magnético está para o campo magnético assim como "quantidade de chuva que molhou o guarda-chuva" está para "intensidade da chuva". Pode estar chovendo forte (B grande), mas se você inclinar o guarda-chuva de lado (cos θ pequeno) ou ele for pequeno (A pequena), pouca água (fluxo) realmente passa por ele.</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> Φ depende de três coisas — a intensidade do campo, a área da espira e o ângulo entre eles. Mexer em qualquer uma delas muda o fluxo.</div>
+  </section>
+
+  <!-- MODULE 3 -->
+  <section class="module" id="m3">
+    <div class="module-head">
+      <div class="module-num">3</div>
+      <h2>Lei de Faraday: a f.e.m. induzida</h2>
+    </div>
+    <p class="module-tag">O coração de toda a matéria: corrente elétrica só nasce quando o fluxo <i>muda</i>.</p>
+
+    <p>A Lei de Faraday diz que surge uma força eletromotriz (f.e.m., medida em volts) sempre que o fluxo magnético através de um circuito <b>varia com o tempo</b>. Quanto mais espiras (N) e quanto mais rápida a variação, maior a f.e.m.:</p>
+    <div class="formula">ε = N · (ΔΦ / Δt)</div>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Pense numa esponja cheia de água parada na sua mão: nada escorre, não importa o quão encharcada ela esteja (fluxo constante = zero corrente). Agora <b>aperte</b> a esponja: só quando você muda a pressão (varia o fluxo) a água (corrente) sai. Parou de apertar? A água para de sair de novo, mesmo que a esponja ainda esteja encharcada. <b>É a mudança que gera corrente, nunca o estado parado.</b></p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto (bate exatamente com uma questão de prova de ressonância magnética)</h3>
+      <p>Um solenoide com N = 10 espiras, raio 30,0 cm (A ≈ 0,27 m²), está num campo magnético uniforme perpendicular ao plano das espiras. Em 0,001 s, o campo varia de 0 a 0,010 T.</p>
+      <p>ΔΦ/Δt = A · (ΔB/Δt) = 0,27 × (0,010 / 0,001) = 0,27 × 10 = 2,7 Wb/s</p>
+      <p>ε = N · ΔΦ/Δt = 10 × 2,7 = <b>27,0 V</b></p>
+      <p>Esse é exatamente o princípio por trás de equipamentos de ressonância magnética: campo variando rapidamente dentro de bobinas gera as correntes que formam a imagem.</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <table class="compare-table">
+        <tr><th>Situação</th><th>Fluxo</th><th>Gera corrente?</th></tr>
+        <tr><td>Ímã parado dentro da espira</td><td>constante</td><td>❌ Não</td></tr>
+        <tr><td>Ímã se aproximando ou se afastando</td><td>variando</td><td>✅ Sim</td></tr>
+        <tr><td>Espira girando num campo fixo</td><td>variando (o ângulo muda)</td><td>✅ Sim</td></tr>
+        <tr><td>Corrente contínua constante na bobina vizinha</td><td>constante</td><td>❌ Não (só no instante em que liga/desliga)</td></tr>
+      </table>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> "parado não gera, só mudança cria" — grave essa frase, ela resume a Lei de Faraday inteira.</div>
+  </section>
+
+  <!-- MODULE 4 -->
+  <section class="module" id="m4">
+    <div class="module-head">
+      <div class="module-num">4</div>
+      <h2>Lei de Lenz: o sentido da corrente induzida</h2>
+    </div>
+    <p class="module-tag">Faraday diz "quanto". Lenz diz "para onde".</p>
+
+    <p>A corrente induzida sempre circula num sentido que <b>se opõe à variação do fluxo</b> que a criou. Isso é, na prática, uma consequência da conservação de energia: a natureza não te dá energia de graça.</p>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Imagine empurrar uma porta de vaivém. Toda vez que você empurra para entrar, ela gera uma resistência contra sua mão que tenta te empurrar de volta. A corrente induzida é exatamente essa "resistência teimosa": se você aproxima um ímã da espira, a corrente induzida cria seu próprio campo magnético para <b>repelir</b> o ímã (dificultar a aproximação). Se você afasta o ímã, a corrente inverte e passa a <b>atrair</b> o ímã de volta (dificultar o afastamento). A espira sempre "briga" contra quem mexeu nela.</p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto</h3>
+      <p>Um ímã em barra é aproximado e depois afastado de uma espira ligada a um amperímetro, ao longo de um eixo que passa pelo centro da espira. Resultado: surge corrente induzida <b>tanto na aproximação quanto no afastamento</b> — só que em sentidos opostos. Se o ímã ficar parado em qualquer ponto do eixo, a corrente é zero, não importa a distância.</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <p>É como um amigo chato que sempre faz o oposto do que você quer: se você tenta empurrá-lo para frente, ele força para trás; se você puxa para trás, ele força para frente. A corrente induzida é fisicamente "chata" com qualquer mudança — e é exatamente por isso que freios magnéticos de montanha-russa funcionam (a corrente induzida nos trilhos metálicos freia o carrinho, se opondo ao seu movimento).</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> a corrente induzida nunca ajuda a mudança que a criou — ela sempre se opõe. É oposição, não cooperação.</div>
+  </section>
+
+  <!-- MODULE 5 -->
+  <section class="module" id="m5">
+    <div class="module-head">
+      <div class="module-num">5</div>
+      <h2>Lendo gráficos de Φ × t</h2>
+    </div>
+    <p class="module-tag">Esse é o tipo de questão que mais derruba gente que "sabe a fórmula" mas não sabe ler o desenho.</p>
+
+    <p>Como ε = N·ΔΦ/Δt, e ΔΦ/Δt é exatamente a <b>inclinação (declividade)</b> da reta no gráfico Φ × t, basta olhar o desenho:</p>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Pense no gráfico como o perfil de uma trilha de montanha vista de lado. Trecho <b>subindo</b> ou <b>descendo</b> = ladeira íngreme = você "sente" a inclinação (há f.e.m.). Trecho <b>reto e plano</b> = não há ladeira nenhuma = f.e.m. zero, mesmo que você esteja bem alto (fluxo grande, mas constante).</p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto</h3>
+      <p>Uma bobina de N = 200 espiras tem o fluxo por espira subindo de 0 a 0,002 Wb entre t = 0 e t = 0,2 s, depois ficando constante em 0,002 Wb até t = 0,6 s, e finalmente descendo a zero entre t = 0,6 s e t = 0,8 s.</p>
+      <p><b>Durante a subida</b> (0 a 0,2 s): ΔΦ/Δt = 0,002/0,2 = 0,01 Wb/s → ε = 200 × 0,01 = <b>2,0 V</b></p>
+      <p><b>No trecho plano</b> (0,2 a 0,6 s): ΔΦ/Δt = 0 → <b>ε = 0 V</b> (mesmo com fluxo máximo!)</p>
+      <p><b>Na descida</b> (0,6 a 0,8 s): mesma inclinação em módulo → <b>ε = 2,0 V</b> novamente (sentido invertido)</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <p>É como velocímetro vs. odômetro num carro parado num sinal vermelho: o odômetro (fluxo acumulado) pode marcar um número altíssimo, mas o velocímetro (a taxa de variação, equivalente à f.e.m.) marca zero porque o carro não está andando naquele instante.</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> trecho inclinado no gráfico = gera tensão; trecho plano (mesmo que alto) = tensão zero.</div>
+  </section>
+
+  <!-- MODULE 6 -->
+  <section class="module" id="m6">
+    <div class="module-head">
+      <div class="module-num">6</div>
+      <h2>Corrente alternada vs. corrente contínua</h2>
+    </div>
+    <p class="module-tag">Por que quase toda indução "útil" usa corrente alternada.</p>
+
+    <div class="box image">
+      <h3>🧠 Imagem mental</h3>
+      <p>Corrente contínua é uma pessoa andando sempre na mesma direção, em linha reta e em velocidade constante — depois do arranque inicial, nada muda, então não "balança" o fluxo. Corrente alternada é alguém numa cadeira de balanço: vai e volta, vai e volta, sem parar — e é esse vaivém constante que mantém o fluxo <b>sempre variando</b>, gerando indução contínua no tempo.</p>
+    </div>
+
+    <div class="box example">
+      <h3>🧮 Exemplo concreto</h3>
+      <p>Um carregador de celular sem fio tem uma bobina na base. Se essa bobina fosse alimentada por corrente <b>contínua</b> constante, geraria um pulso de indução só no instante de ligar e desligar — e nada entre esses dois momentos. Por isso a base usa corrente <b>alternada</b>: o fluxo está sempre subindo e descendo, então a bobina do celular recebe energia continuamente, enquanto estiver próxima.</p>
+    </div>
+
+    <div class="box compare">
+      <h3>🔁 Comparação simples</h3>
+      <p>A lâmpada da sua casa pisca 100 ou 120 vezes por segundo (acompanhando a corrente alternada de 50 ou 60 Hz), mas seu olho não percebe porque é rápido demais — exatamente como um ventilador girando rápido parece um disco sólido. A luz "parece" constante, mas eletricamente está sempre variando.</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> indução contínua e sustentada no tempo exige corrente alternada na fonte — corrente contínua constante não sustenta f.e.m. induzida.</div>
+  </section>
+
+  <!-- MODULE 7 -->
+  <section class="module" id="m7">
+    <div class="module-head">
+      <div class="module-num">7</div>
+      <h2>Aplicações do mundo real</h2>
+    </div>
+    <p class="module-tag">Toda a teoria acima em quatro aparelhos que você já usou.</p>
+
+    <div class="box example">
+      <h3>🔌 Ignição automotiva (transformador)</h3>
+      <p>A bateria do carro (12 V, baixa tensão) alimenta o enrolamento <b>primário</b> de uma bobina de ignição. Ao cortar essa corrente rapidamente, o fluxo cai bruscamente, induzindo uma tensão enorme no enrolamento <b>secundário</b> — alta o bastante para criar a centelha nas velas. É a Lei de Faraday pura: ΔΦ/Δt gigante por causa do corte abrupto de corrente.</p>
+    </div>
+
+    <div class="box example">
+      <h3>🍳 Fogão de indução</h3>
+      <p>Uma bobina embaixo do vidro gera um campo magnético alternado. A base da panela (metálica) funciona como uma "espira de uma volta": o fluxo variando dentro dela induz correntes que, por efeito Joule (resistência do metal), aquecem a panela diretamente — o vidro em si não esquenta, só a panela.</p>
+    </div>
+
+    <div class="box example">
+      <h3>📶 Carregador sem fio</h3>
+      <p>A base gera um campo magnético alternado; a bobina dentro do celular "sente" esse fluxo variando e gera uma f.e.m. induzida, convertida em corrente para carregar a bateria. Sem contato elétrico direto — só o fluxo variável atravessando o espaço entre as duas bobinas.</p>
+    </div>
+
+    <div class="box example">
+      <h3>💧 Usina hidrelétrica (geração de energia)</h3>
+      <p>A água em movimento gira turbinas conectadas a bobinas que giram dentro de campos magnéticos fixos (ou vice-versa). Ao girar, o ângulo θ do fluxo (Φ = B·A·cosθ) muda constantemente, criando uma f.e.m. alternada — essa é a origem de praticamente toda a energia elétrica que chega à sua casa.</p>
+    </div>
+
+    <div class="recall"><b>Fixou:</b> todo esses aparelhos fazem a mesma coisa — criam um fluxo magnético que varia de propósito, para colher a f.e.m. induzida que essa variação gera.</div>
+  </section>
+
+  <!-- MNEMONIC -->
+  <section class="mnemonic" id="atalho">
+    <h2>🎯 Atalho mental: "O Ímã Preguiçoso e a Bobina Birrenta"</h2>
+    <p>Para lembrar de tudo acima em 10 segundos, imagine esta historinha sempre que ler uma questão de indução:</p>
+
+    <div class="story-step">
+      <div class="story-emoji">🧲😴</div>
+      <div><b>O ímã preguiçoso:</b> parado dentro ou perto de uma espira, ele não faz nada. Nenhuma corrente nasce de um ímã parado — "parado não gera".</div>
+    </div>
+    <div class="story-step">
+      <div class="story-emoji">🏃💨</div>
+      <div><b>Alguém sacode o ímã</b> (ele se aproxima, se afasta, ou gira): isso muda o fluxo que atravessa a espira. <i>Só mudança cria</i> f.e.m. — e quanto mais rápido o sacode e quanto mais espiras (N) a bobina tiver, mais forte é a tensão gerada (ε = N·ΔΦ/Δt).</div>
+    </div>
+    <div class="story-step">
+      <div class="story-emoji">😤🔁</div>
+      <div><b>A bobina birrenta:</b> ela não gosta de ser incomodada, então a corrente que nasce nela sempre tenta <i>atrapalhar</i> quem a sacudiu — empurra o ímã para longe se ele se aproxima, puxa de volta se ele se afasta (Lei de Lenz).</div>
+    </div>
+    <div class="story-step">
+      <div class="story-emoji">📈〰️</div>
+      <div><b>Se alguém ficar sacudindo o ímã pra lá e pra cá sem parar</b> (corrente alternada), a bobina gera tensão o tempo todo — é assim que carregador sem fio, fogão de indução e usina hidrelétrica funcionam.</div>
+    </div>
+
+    <div class="recall" style="margin-top:22px;"><b>Resumo de uma frase:</b> "Parado não gera, só mudança cria — e a bobina sempre se vira contra quem mexeu nela."</div>
+  </section>
+
+  <div class="cta-row">
+    <a class="btn primary" href="quiz.html">Testar meu entendimento no quiz →</a>
+    <a class="btn ghost" href="#m1">Voltar ao topo</a>
+  </div>
+
+  <footer>Guia de estudo gerado para revisão de Eletromagnetismo · Indução Eletromagnética e Lei de Faraday</footer>
+</div>
+
+</body>
+</html>
