@@ -129,6 +129,71 @@ const QUESTIONS = [
     explain: "Essa é exatamente a síntese da Lei de Faraday (só a VARIAÇÃO do fluxo gera f.e.m.) com a Lei de Lenz (a corrente induzida sempre se OPÕE à variação que a criou).",
     example: "Volte na história do 'Ímã Preguiçoso e da Bobina Birrenta' no guia de estudo sempre que precisar relembrar rápido esse conceito antes de uma prova.",
   },
+  {
+    tag: "Estilo vestibular · Afirmações",
+    q: "Considere as afirmações sobre indução eletromagnética: (I) Uma espira parada dentro de um campo magnético constante não gera corrente, mesmo com fluxo grande. (II) Uma espira girando dentro de um campo magnético constante gera corrente alternada, pois o ângulo entre o campo e a normal da espira muda continuamente. (III) Uma corrente contínua e constante numa bobina induz continuamente corrente numa bobina vizinha, enquanto permanecer ligada. Está correto apenas o que se afirma em:",
+    options: [
+      "I e II",
+      "I e III",
+      "II e III",
+      "I, II e III",
+    ],
+    correct: 0,
+    explain: "I está correta (fluxo constante → ε = 0). II está correta (Φ = B·A·cosθ varia com a rotação, gerando CA). III está errada: corrente contínua e constante gera fluxo constante, então induz corrente apenas no instante de ligar/desligar, não continuamente.",
+    example: "É o mesmo raciocínio do carregador sem fio: só uma fonte que varia sem parar (como a rotação da espira, ou uma corrente alternada) sustenta indução contínua.",
+  },
+  {
+    tag: "Estilo vestibular · Lenz e energia",
+    q: "Um ímã preso a uma mola oscila verticalmente bem no centro de uma espira metálica conectada a uma lâmpada. Com o passar do tempo, mesmo com resistência do ar desprezível, a amplitude das oscilações do ímã diminui até cessar. Isso ocorre porque:",
+    options: [
+      "O ímã perde massa ao longo do tempo",
+      "A corrente induzida na espira cria um campo que se opõe ao movimento do ímã (Lei de Lenz), retirando energia mecânica do sistema e dissipando-a na lâmpada",
+      "A mola se torna mais rígida com o uso",
+      "É fisicamente impossível isso acontecer sem resistência do ar",
+    ],
+    correct: 1,
+    explain: "Pela Lei de Lenz, a corrente induzida sempre se opõe ao movimento que a gerou — isso significa que ela constantemente 'freia' o ímã. Essa frenagem retira energia mecânica do sistema massa-mola, que reaparece como energia elétrica (acendendo a lâmpada) e depois como calor.",
+    example: "É o mesmo princípio do freio magnético de montanha-russa do guia: a corrente induzida sempre rouba energia do movimento que a criou, por isso as oscilações não duram para sempre.",
+  },
+  {
+    tag: "Estilo vestibular · Cálculo (Força de Lorentz)",
+    q: "Uma partícula com carga q = 2,0×10⁻¹⁹ C entra em um campo magnético de 4,0 T com velocidade de 5,0×10⁵ m/s. O ângulo entre a velocidade e o campo é tal que sen θ = 0,8 (e cos θ = 0,6). O valor da força magnética sobre a partícula é:",
+    options: [
+      "3,2×10⁻¹³ N",
+      "2,4×10⁻¹³ N",
+      "4,0×10⁻¹³ N",
+      "1,0×10⁻¹³ N",
+    ],
+    correct: 0,
+    explain: "F = q·v·B·senθ = 2,0×10⁻¹⁹ × 5,0×10⁵ × 4,0 × 0,8 = 3,2×10⁻¹³ N. O erro mais comum (alternativa 2,4×10⁻¹³ N) é usar cos θ no lugar de sen θ — mas a força magnética usa sempre o seno do ângulo entre v e B.",
+    example: "Volte ao Módulo 1: a força é máxima quando v é perpendicular a B (sen 90° = 1) e zero quando v é paralelo a B (sen 0° = 0). Por isso a fórmula usa seno, não cosseno.",
+  },
+  {
+    tag: "Estilo vestibular · Geração de energia",
+    q: "Numa usina hidrelétrica, a água em movimento faz a bobina do gerador girar dentro de um campo magnético fixo. A corrente elétrica produzida e enviada pelas linhas de transmissão é:",
+    options: [
+      "Contínua, pois a água flui sempre no mesmo sentido",
+      "Alternada, pois o ângulo θ entre o campo e a normal da espira muda continuamente, fazendo Φ = B·A·cos θ oscilar",
+      "Nula, pois o fluxo médio ao longo de uma volta completa é zero",
+      "Impossível de prever sem saber a vazão exata da água",
+    ],
+    correct: 1,
+    explain: "O sentido do fluxo da água não importa diretamente para o tipo de corrente — o que importa é que a bobina GIRA, variando continuamente o ângulo θ e, portanto, o fluxo Φ = B·A·cosθ. Essa variação periódica gera uma f.e.m. que também é periódica: corrente alternada.",
+    example: "É a mesma ideia do Módulo 7: o giro da bobina é só mais uma forma de 'sacudir' o fluxo sem parar — como o vaivém da corrente alternada do Módulo 6.",
+  },
+  {
+    tag: "Estilo vestibular · Transformador e número de espiras",
+    q: "Na bobina de ignição automotiva, o enrolamento secundário (ligado às velas) tem um número de espiras N muito maior que o enrolamento primário (ligado à bateria de 12 V). Usando ε = N·ΔΦ/Δt, isso ajuda a explicar por que:",
+    options: [
+      "A tensão induzida no secundário pode ser muito maior que 12 V, mesmo com a mesma variação de fluxo por espira",
+      "A corrente no secundário é sempre contínua e constante",
+      "O número de espiras não influencia a tensão induzida, apenas a corrente",
+      "A resistência do fio diminui conforme o número de espiras aumenta, o que sozinho explica a alta tensão",
+    ],
+    correct: 0,
+    explain: "Na fórmula ε = N·ΔΦ/Δt, N multiplica diretamente a f.e.m. induzida. Se o secundário tem muito mais espiras que o primário, a mesma variação de fluxo por espira (ΔΦ/Δt) gera uma tensão proporcionalmente maior no secundário — é assim que 12 V viram milhares de volts na vela.",
+    example: "Relembrando o Módulo 3: no exemplo da ressonância magnética, dobrar N dobra a f.e.m., mesmo sem mudar nada no campo magnético. É o mesmo efeito, só que levado ao extremo na bobina de ignição.",
+  },
 ];
 
 let current = 0;
@@ -233,9 +298,9 @@ function showResults() {
   document.getElementById("score-text").textContent = `${score}/${QUESTIONS.length}`;
 
   let msg;
-  if (score === QUESTIONS.length) msg = "Perfeito! Você dominou indução eletromagnética. Releia só o atalho mental de vez em quando para manter fresco.";
-  else if (score >= 7) msg = "Muito bom! Reveja no guia os módulos das perguntas erradas abaixo — são pontos pequenos de ajustar.";
-  else if (score >= 4) msg = "Bom começo. Volte ao guia de estudo e releia com calma os módulos indicados abaixo antes de repetir o quiz.";
+  if (score === QUESTIONS.length) msg = "Perfeito! Você dominou indução eletromagnética, inclusive no nível de vestibular. Releia só o atalho mental de vez em quando para manter fresco.";
+  else if (score >= 11) msg = "Muito bom! Reveja no guia os módulos das perguntas erradas abaixo — são pontos pequenos de ajustar.";
+  else if (score >= 6) msg = "Bom começo. Volte ao guia de estudo e releia com calma os módulos indicados abaixo antes de repetir o quiz.";
   else msg = "Sem problema — é bastante conteúdo novo. Releia o guia do início, focando nas imagens mentais e nos exemplos, e tente de novo.";
   document.getElementById("score-msg").textContent = msg;
 

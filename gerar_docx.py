@@ -339,9 +339,18 @@ doc.add_page_break()
 # ---------- QUIZ LINK ----------
 doc.add_heading("9. Quiz online", level=1)
 doc.add_paragraph(
-    "O quiz inteligente com 10 perguntas, correção automática, explicação dos erros e exemplos extras está "
-    "disponível online (link inserido após o deploy no Vercel — veja a página index.html / quiz.html publicada)."
+    "O quiz inteligente com 15 perguntas (incluindo 5 no estilo de provas de vestibular), correção automática, "
+    "explicação dos erros e exemplos extras está disponível online:"
 )
+linkp = doc.add_paragraph()
+lr1 = linkp.add_run("Guia de estudo: ")
+lr1.bold = True
+linkp.add_run("https://fisica-alpha.vercel.app/")
+linkp2 = doc.add_paragraph()
+lr2 = linkp2.add_run("Quiz: ")
+lr2.bold = True
+linkp2.add_run("https://fisica-alpha.vercel.app/quiz.html")
+doc.add_paragraph()
 p = doc.add_paragraph()
 r = p.add_run("Dica: ")
 r.bold = True
